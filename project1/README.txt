@@ -36,5 +36,16 @@
 
    + Run command './app', it will show result
 
+=============== USE SHELL SCRIPT ===========================
+- Create a file: <named>.sh 
+  example: build.sh
+  In this file, write all above command:
+                 gcc -IInc -c main/main.c -o output/main.o 
+                 gcc -IInc -c Src/file1.c -o output/file1.o 
+                 gcc -o app output/main.o output/file1.o 
+                 ./app 
+- With shellscript, I don't need to worry about editing the files. Just need to run command './build.sh', it will run all the commands inside.
+- But in essence, it stills do step by step.
+
 ============================================================
 So you can see, to build a simple project that go through many steps. Then what is come if we build the large project with a lots file, we couldn't go step by step like this. That's why I decide to use Makefile. I will use it at project2. 
